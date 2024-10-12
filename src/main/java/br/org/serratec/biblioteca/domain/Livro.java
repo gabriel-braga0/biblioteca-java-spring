@@ -1,6 +1,7 @@
 package br.org.serratec.biblioteca.domain;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
@@ -22,6 +23,7 @@ public class Livro {
     private Integer qtdPaginas;
 
     @Embedded
+    @Valid
     private Publicacao publicacao;
 
     public Publicacao getPublicacao() {
